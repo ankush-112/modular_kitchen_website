@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<!-- Hero Banner -->
+<div
+  style="
+    background: url('{% static 'images/Walk-in.jpg' %}') center center / cover no-repeat;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  "
+>
+  <h1 style="color: white; font-size: 3rem; text-shadow: 2px 2px 8px rgba(0,0,0,0.7); padding: 1rem;">
+    Walk-In Wardrobe Solutions
+  </h1>
+</div>
+
+<!-- Description Section -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <p class="text-center fs-5 text-muted">
+      At Trioo Kitchen, we specialize in crafting modern walk-in wardrobes that enhance both functionality and luxury. 
+      Our experienced architects and designers analyze spatial possibilities to develop tailor-made wardrobe solutions that reflect your lifestyle and optimize storage in the most elegant way. 
+      From smart modular storage units to stylish finishes, every wardrobe is designed to blend seamlessly with your bedroom or dressing space.
+    </p>
+  </div>
+</section>
+
+<!-- Gallery Section -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-5">Style Meets Space: Discover Our Walk-In Wardrobe Designs</h2>
+    <div class="row g-4">
+      <div class="col-md-4 col-sm-6">
+        <img
+          src="{% static 'images/hero-walkin.jpg' %}"
+          class="img-fluid rounded shadow-sm"
+          alt="Spacious Walk-in Wardrobe"
+        />
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <img
+          src="{% static 'images/walkin.jpg' %}"
+          class="img-fluid rounded shadow-sm"
+          alt="Custom Wardrobe Design"
+        />
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <img
+          src="{% static 'images/hero-walkin1.jpg' %}"
+          class="img-fluid rounded shadow-sm"
+          alt="Elegant Walk-in Layout"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta bg-dark text-white text-center py-5">
+  <div class="container">
+    <h2 class="mb-3">Create Your Personal Dressing Retreat</h2>
+    <p class="lead mb-4">Get started with a customized walk-in wardrobe that blends luxury and practicality.</p>
+    <a href="{% url 'contact' %}" class="btn btn-light btn-lg">Book Your Consultation</a>
+  </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<!-- Hero Banner -->
+<div
+  style="background: url('{% static 'images/Main_hinged.jpg' %}') center center / cover no-repeat;
+        min-height: 60vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      "
+    >
+  <h1 style="color: white; font-size: 3rem; text-shadow: 2px 2px 8px rgba(0,0,0,0.7); padding: 1rem;">
+    Stainless Steel Hinged Wardrobes
+  </h1>
+</div>
+
+<!-- Description Section -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <p class="text-center fs-5 text-muted">
+      Discover Trioo Kitchen’s exclusive range of stainless steel hinged wardrobes — engineered for strength, elegance, and long-lasting appeal.
+      Our wardrobes are perfect for urban homes looking for premium, custom-fitted modular wardrobe solutions.
+      Each piece combines precision-built stainless steel with sleek designs, delivering both style and practical functionality.
+    </p>
+  </div>
+</section>
+
+<!-- Gallery Section -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-5">Modern Designs with Lasting Durability</h2>
+    <div class="row g-4">
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="card h-100 shadow-sm">
+          <img
+            src="{% static 'images/hinged1.jpg' %}"
+            class="card-img-top"
+            style="height: 300px; object-fit: cover;"
+            alt="Stainless Steel Hinged Wardrobe"
+          />
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="card h-100 shadow-sm">
+          <img
+            src="{% static 'images/hinged2.jpg' %}"
+            class="card-img-top"
+            style="height: 300px; object-fit: cover;"
+            alt="Openable Stainless Steel Wardrobe"
+          />
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="card h-100 shadow-sm">
+          <img
+            src="{% static 'images/hinged3.jpg' %}"
+            class="card-img-top"
+            style="height: 300px; object-fit: cover;"
+            alt="Premium Hinged Wardrobe"
+          />
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="card h-100 shadow-sm">
+          <img
+            src="{% static 'images/hinged4.jpg' %}"
+            class="card-img-top"
+            style="height: 300px; object-fit: cover;"
+            alt="Contemporary Steel Wardrobe"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta bg-dark text-white text-center py-5">
+  <div class="container">
+    <h2 class="mb-3">Upgrade Your Storage with Smart Stainless Steel Wardrobes</h2>
+    <p class="lead mb-4">Book a design consultation and get expert advice on creating your ideal wardrobe space.</p>
+    <a href="{% url 'contact' %}" class="btn btn-light btn-lg">Get a Free Quote</a>
+  </div>
+</section>
+
+{% endblock %}

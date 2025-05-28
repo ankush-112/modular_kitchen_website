@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Trioo Kitchen - Transform Your Kitchen Space{% endblock %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<section class="hero text-white d-flex align-items-center"
+         style="background: url('{% static "images/about-kitchen.jpg" %}') center / cover no-repeat; min-height: 90vh;">
+  <div class="container text-center py-5">
+    <h1 class="display-4 fw-bold">Transform Your Kitchen Into A <span class="highlight">Masterpiece</span></h1>
+    <p class="lead mt-3 mb-4">
+      We design and build custom <strong>modular kitchens</strong> that blend creativity and functionality
+      to perfectly suit your space and lifestyle.
+    </p>
+    <div class="d-flex justify-content-center gap-3 flex-wrap">
+      <a href="{% url 'contact' %}" class="btn btn-lg btn-primary">Get Free Quote</a>
+      <a href="{% url 'kitchen' %}" class="btn btn-lg btn-outline-light">Explore Products</a>
+    </div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section class="about bg-light py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">About Trioo Kitchen</h2>
+    <div class="row align-items-center">
+      <div class="col-md-6 mb-4 mb-md-0">
+        <img src="{% static 'images/about-kitchen.jpg' %}" class="img-fluid w-100 rounded shadow" alt="About Kitchen" />
+      </div>
+      <div class="col-md-6">
+        <p class="fs-5">
+          Trioo Kitchen specializes in transforming everyday kitchen spaces into functional
+          and stylish <strong>modular kitchen solutions</strong>. We manufacture and customize kitchen interiors that reflect modern aesthetics while serving practical needs.
+        </p>
+        <a href="{% url 'about' %}" class="btn btn-primary mt-3">Learn More</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Kitchen Types -->
+<section class="kitchen-types py-5">
+  <div class="container">
+    <h2 class="text-center mb-5">Our Kitchen Types</h2>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm border-0">
+          <img src="{% static 'images/l2-kitchen.jpg' %}" class="card-img-top img-fluid w-100" alt="L Shaped Kitchen">
+          <div class="card-body">
+            <h5 class="card-title">L Shaped Kitchen</h5>
+            <p class="card-text">Perfect for maximizing corner space, this <strong>L Shaped layout</strong> fits well in compact as well as open kitchen areas.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm border-0">
+          <img src="{% static 'images/u-kitchen.jpg' %}" class="card-img-top img-fluid w-100" alt="U Shaped Kitchen">
+          <div class="card-body">
+            <h5 class="card-title">U Shaped Kitchen</h5>
+            <p class="card-text">Ideal for those who need a larger cooking area, the <strong>U Shaped kitchen</strong> offers maximum storage and worktop space.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Parallel Kitchen -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm border-0">
+          <img src="{% static 'images/Parallel-Kitchen.jpg' %}" class="card-img-top img-fluid w-100" alt="Parallel Kitchen">
+          <div class="card-body">
+            <h5 class="card-title">Parallel Kitchen</h5>
+            <p class="card-text">Designed for efficiency, the <strong>Parallel Kitchen</strong> is ideal for narrow spaces, providing dual countertops for smooth workflow.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Call to Action -->
+<section class="cta bg-dark text-white text-center py-5">
+  <div class="container">
+    <h2 class="mb-3">Let’s Design Your Dream Kitchen</h2>
+    <p class="lead mb-4">
+      Explore our custom modular kitchen solutions that blend aesthetics with practical design.
+    </p>
+    <a href="{% url 'contact' %}" class="btn btn-light btn-lg">Get in Touch</a>
+  </div>
+</section>
+
+{% endblock %}
+

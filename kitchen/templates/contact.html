@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Contact Us - Trioo Kitchen | Modular Kitchen & Wardrobe Experts{% endblock %}
+
+{% block meta %}
+  <meta name="keywords" content="Trioo Kitchen, Contact Trioo, Modular Kitchens, Stainless Steel Wardrobes, Interior Design, Custom Wardrobes, Kitchen Experts">
+  <meta name="description" content="Get in touch with Trioo Kitchen for premium modular kitchen and wardrobe solutions. Reach out for consultations, quotes, and expert advice.">
+{% endblock %}
+
+{% block content %}
+
+<!-- Hero Banner -->
+<section
+  class="py-5 text-white text-center position-relative"
+  style="background: url('{% static 'images/contact-banner.jpg' %}') center/cover no-repeat; min-height: 50vh;"
+>
+  <div class="overlay position-absolute top-0 start-0 w-100 h-100 bg-dark" style="opacity: 0.6;"></div>
+  <div class="container position-relative z-1">
+    <h1 class="display-4 fw-bold text-shadow mb-3">Contact Us</h1>
+    <p class="lead">We’d love to help you create your dream kitchen or wardrobe. Reach out today.</p>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="row g-4 align-items-stretch">
+      
+      <!-- Contact Info -->
+      <div class="col-lg-5">
+        <div class="card shadow-sm border-0 h-100">
+          <div class="card-body p-4">
+            <h2 class="h4 mb-4">Get in Touch</h2>
+            <p><strong>Address:</strong><br>123 Kitchen Street, Design District, City</p>
+            <p><strong>Phone:</strong><br><a href="tel:+12345678900" class="text-decoration-none">+1 234 567 8900</a></p>
+            <p><strong>Email:</strong><br><a href="mailto:info@triookitchen.com" class="text-decoration-none">info@triookitchen.com</a></p>
+            <p><strong>Working Hours:</strong><br>Mon - Sat, 9AM to 6PM</p>
+            <p class="text-muted mt-4">Follow us on social media for updates and inspiration.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="col-lg-7">
+        <div class="card shadow-sm border-0 h-100">
+          <div class="card-body p-4">
+            <h2 class="h4 mb-4">Send Us a Message</h2>
+
+            {% if messages %}
+            <div class="messages mb-3">
+              {% for message in messages %}
+                <div class="alert {% if message.tags == 'success' %}alert-success{% else %}alert-danger{% endif %}">
+                  {{ message }}
+                </div>
+              {% endfor %}
+            </div>
+            {% endif %}
+
+            <form action="{% url 'contact' %}" method="post">
+              {% csrf_token %}
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="name" class="form-label">Full Name</label>
+                  <input type="text" id="name" name="name" class="form-control" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="email" class="form-label">Email Address</label>
+                  <input type="email" id="email" name="email" class="form-control" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="phone" class="form-label">Phone Number</label>
+                  <input type="tel" id="phone" name="phone" class="form-control" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="subject" class="form-label">Subject</label>
+                  <input type="text" id="subject" name="subject" class="form-control" required>
+                </div>
+              </div>
+
+              <div class="mb-3 mt-3">
+                <label for="message" class="form-label">Your Message</label>
+                <textarea id="message" name="message" rows="5" class="form-control" required></textarea>
+              </div>
+
+              <div class="d-grid">
+                <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{% endblock %}

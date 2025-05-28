@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Gallery - Modular Kitchen</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">Modular Kitchen</a>
+      </div>
+    </nav>
+
+    <div class="container mt-4">
+      <h2 class="text-center">Kitchen Gallery</h2>
+      <div id="projects" class="row"></div>
+    </div>
+
+    <script>
+      fetch("/projects/")
+        .then((response) => response.json())
+        .then((data) => {
+          let projectsDiv = document.getElementById("projects");
+          data.projects.forEach((proj) => {
+            projectsDiv.innerHTML += `
+                    <div class="col-md-4">
+                        <div class="card p-3 mb-3 shadow">
+                           <img src="/media/{{ proj.image }}" class="card-img-top" alt="{{ proj.title }}">
+
+                            <h5>${proj.title}</h5>
+                            <p>${proj.description}</p>
+                        </div>
+                    </div>`;
+          });
+        });
+    </script>
+  </body>
+</html>

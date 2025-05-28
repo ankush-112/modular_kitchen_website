@@ -1,0 +1,247 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{% block title %}Trioo Kitchen - Preview{% endblock %}</title>
+
+    <!-- External CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
+      iframe.full-screen-preview__frame {
+        width: 100%;
+        height: calc(100vh - 70px); /* Adjust depending on header height */
+        border: none;
+      }
+      header {
+        background-color: #fff;
+        border-bottom: 1px solid #ccc;
+        padding: 10px 20px;
+      }
+      nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: 20px;
+        align-items: center;
+      }
+      nav ul li {
+        display: inline;
+      }
+      nav ul li a {
+        text-decoration: none;
+        color: #000;
+        font-weight: 500;
+      }
+
+      .page-header {
+        background-color: #f3f3f3; /* Soft gray background */
+        padding: 4rem 1rem;
+        text-align: center;
+      }
+    
+      .header-center h1 {
+        font-size: 3rem;
+        color: #d35400; /* Deep orange title */
+        font-weight: bold;
+        margin-bottom: 1rem;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+      }
+    
+      .header-center .tagline {
+        font-size: 1.2rem;
+        color: #555;
+        font-style: italic;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+    </style>
+
+    {% block extra_head %}{% endblock %}
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4">
+        <a class="navbar-brand bg-white p-1 rounded" href="{% url 'home' %}">
+          <img src="{% static 'images/logo.svg' %}" alt="Logo" height="40" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link text-white" href="{% url 'home' %}"
+                >MODULAR KITCHEN</a
+              >
+            </li>
+
+            <!-- Wardrobe Dropdown -->
+            <li class="nav-item dropdown position-relative">
+              <a
+                class="nav-link dropdown-toggle text-white"
+                href="#"
+                id="wardrobeDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                WARDROBE
+              </a>
+              <ul
+                class="dropdown-menu shadow"
+                aria-labelledby="wardrobeDropdown"
+                style="background-color: #222; border: none; min-width: 200px"
+              >
+                <li>
+                  <a
+                    class="dropdown-item text-white"
+                    href="{% url 'walkin_wardrobe' %}"
+                    >Walk in Wardrobe</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item text-white"
+                    href="{% url 'hinged_wardrobe' %}"
+                    >Hinged Wardrobe</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item text-white"
+                    href="{% url 'sliding_wardrobe' %}"
+                    >Sliding Wardrobe</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link text-white" href="{% url 'about' %}">ABOUT</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="{% url 'contact' %}"
+                >CONTACT</a
+              >
+            </li>
+            <!-- Kitchen Dropdown -->
+            <li class="nav-item dropdown position-relative">
+              <a
+                class="nav-link dropdown-toggle text-white"
+                href="#"
+                id="kitchenDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                KITCHEN
+              </a>
+              <ul
+                class="dropdown-menu shadow"
+                aria-labelledby="kitchenDropdown"
+                style="background-color: #222; border: none; min-width: 220px"
+              >
+                <li>
+                  <a class="dropdown-item text-white" href="{% url 'kitchen' %}"
+                    >L Shaped Kitchen</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item text-white" href="{% url 'kitchen' %}"
+                    >U Shaped Kitchen</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item text-white" href="{% url 'kitchen' %}"
+                    >G Shaped Kitchen</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item text-white" href="{% url 'kitchen' %}"
+                    >In-Line Kitchen</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item text-white" href="{% url 'kitchen' %}"
+                    >Parallel Kitchen</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item text-white" href="{% url 'kitchen' %}"
+                    >Island Kitchen</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item text-white" href="{% url 'kitchen' %}"
+                    >Italian Kitchen</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item text-white" href="{% url 'kitchen' %}"
+                    >German Kitchen</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link text-white" href="{% url 'product' %}"
+                >PRODUCTS</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Content / iframe -->
+    <main>
+      {% block content %}
+      <iframe
+        class="full-screen-preview__frame"
+        src="https://argukitchen.useful-pixels.com/"
+        allow="geolocation 'self'; autoplay 'self';"
+      ></iframe>
+      {% endblock %}
+    </main>
+
+    <!-- Footer (optional) -->
+    <footer class="text-center py-3 bg-light mt-auto">
+      <p>&copy; {% now "Y" %} Trioo Kitchen. All rights reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    {% block extra_scripts %}{% endblock %}
+  </body>
+</html>

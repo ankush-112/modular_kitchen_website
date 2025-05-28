@@ -1,0 +1,232 @@
+{% extends 'base.html' %} {% load static %} {% block title %}L Shaped Kitchen -
+Premium Design & Inspiration{% endblock %} {% block content %}
+<!-- HERO SECTION -->
+<section
+  class="hero-section position-relative"
+  style="
+    background: url('https://images.pexels.com/photos/6585761/pexels-photo-6585761.jpeg?auto=compress&cs=tinysrgb&w=1350')
+      center center/cover no-repeat;
+    min-height: 70vh;
+  "
+>
+  <div
+    class="overlay"
+    style="
+      background-color: rgba(0, 0, 0, 0.5);
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    "
+  ></div>
+  <div class="container h-100 position-relative" style="z-index: 2">
+    <div class="row h-100 align-items-center">
+      <div class="col-md-8 text-white">
+        <h1 class="display-3 fw-bold">L Shaped Kitchen</h1>
+        <p class="lead">
+          Experience the perfect balance of functionality and luxury. Designed
+          to maximize space while ensuring a seamless flow.
+        </p>
+        <a href="{% url 'contact' %}" class="btn btn-primary btn-lg mt-3"
+          >Get Started</a
+        >
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INTRODUCTION -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="fw-bold mb-4">Discover the Epitome of Modern Kitchen Design</h2>
+    <p class="mb-4">
+      The L Shaped Kitchen layout is not just a trend—it's a timeless design
+      that integrates aesthetic elegance with ultimate functionality. Perfect
+      for both open-concept and compact spaces, our premium design ensures that
+      every inch is thoughtfully utilized.
+    </p>
+    <p>
+      Whether you’re remodeling or starting fresh, our tailored approach merges
+      smart storage, luxury materials, and modern appliances to create a space
+      that inspires every meal.
+    </p>
+  </div>
+</section>
+
+<!-- DESIGN BENEFITS -->
+<section class="bg-light py-5">
+  <div class="container">
+    <h2 class="fw-bold text-center mb-5">Why Choose an L Shaped Kitchen?</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 border-0 shadow">
+          <div class="card-body">
+            <h4 class="card-title">Smart Space Utilization</h4>
+            <p class="card-text">
+              Ideal for both small and large areas, L shaped kitchens
+              efficiently use corner space and open up the room layout.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 border-0 shadow">
+          <div class="card-body">
+            <h4 class="card-title">Efficient Workflow</h4>
+            <p class="card-text">
+              Creates a natural work triangle between sink, stove, and
+              refrigerator—reducing unnecessary movement.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 border-0 shadow">
+          <div class="card-body">
+            <h4 class="card-title">Elegant Customization</h4>
+            <p class="card-text">
+              Choose from a wide range of finishes, accessories, and layouts to
+              match your lifestyle and interior theme.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="fw-bold mb-4">Features & Materials</h2>
+    <div class="row align-items-center">
+      <div class="col-md-6 mb-4">
+        <img
+          src="https://images.pexels.com/photos/2089698/pexels-photo-2089698.jpeg?auto=compress&cs=tinysrgb&w=800"
+          class="img-fluid rounded shadow"
+          alt="L Shaped Kitchen"
+        />
+      </div>
+      <div class="col-md-6">
+        <h4>Modular Cabinets</h4>
+        <p>
+          Engineered with premium materials, these cabinets offer smooth
+          operation, elegant designs, and long-lasting durability.
+        </p>
+        <h4>High-End Finishes</h4>
+        <p>
+          Available in gloss, matte, woodgrain, acrylic, and more. Customize the
+          textures and tones to suit your decor.
+        </p>
+        <h4>Smart Storage</h4>
+        <p>
+          Corner pull-outs, hidden compartments, and vertical drawers make every
+          inch count without sacrificing beauty.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<!-- GALLERY -->
+<!-- GALLERY -->
+<section class="bg-dark text-white py-5">
+  <div class="container">
+    <h2 class="fw-bold text-center mb-5">Inspiration Gallery</h2>
+    <div class="row g-3">
+      <!-- ✅ L Shaped Kitchen -->
+      <div class="col-md-4">
+        <img
+          src="https://images.pexels.com/photos/6284237/pexels-photo-6284237.jpeg?auto=compress&cs=tinysrgb&w=800"
+          alt="L Shaped Kitchen"
+          class="img-fluid rounded shadow"
+        />
+      </div>
+
+      <!-- ✅ U Shaped Kitchen -->
+      <div class="col-md-4">
+        <img
+          src="https://images.pexels.com/photos/7534553/pexels-photo-7534553.jpeg?auto=compress&cs=tinysrgb&w=800"
+          alt="U Shaped Kitchen"
+          class="img-fluid rounded shadow"
+        />
+      </div>
+
+      <!-- ✅ Modular Island Kitchen (already liked by you) -->
+      <div class="col-md-4">
+        <img
+          src="https://images.pexels.com/photos/2089698/pexels-photo-2089698.jpeg?auto=compress&cs=tinysrgb&w=800"
+          alt="Modular Kitchen Interior"
+          class="img-fluid rounded shadow"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="fw-bold text-center mb-5">What Our Clients Say</h2>
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <div class="card shadow h-100">
+          <div class="card-body">
+            <p class="fst-italic">
+              "Absolutely stunning transformation! The kitchen looks straight
+              out of a design magazine. Highly recommend Trioo!"
+            </p>
+          </div>
+          <div class="card-footer bg-white border-0">
+            <strong>– Ankush Chauhan</strong>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="card shadow h-100">
+          <div class="card-body">
+            <p class="fst-italic">
+              "From consultation to installation, everything was smooth. Loved
+              the corner storage hacks!"
+            </p>
+          </div>
+          <div class="card-footer bg-white border-0">
+            <strong>– Rajiv M.</strong>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="card shadow h-100">
+          <div class="card-body">
+            <p class="fst-italic">
+              "The layout works beautifully for our joint family. Spacious,
+              elegant, and functional!"
+            </p>
+          </div>
+          <div class="card-footer bg-white border-0">
+            <strong>– Anjali T.</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA SECTION -->
+<section
+  class="py-5 text-white text-center"
+  style="background: linear-gradient(135deg, #4b79a1, #283e51)"
+>
+  <div class="container">
+    <h2 class="fw-bold">Let's Build Your Dream Kitchen</h2>
+    <p class="lead mb-4">
+      Ready to upgrade? Our expert designers are just one click away.
+    </p>
+    <a href="{% url 'contact' %}" class="btn btn-light btn-lg px-5">
+      Schedule a Free Consultation
+    </a>
+  </div>
+</section>
+{% endblock %}
