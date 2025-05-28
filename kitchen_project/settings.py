@@ -12,19 +12,11 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 import os
-from decouple import Config, RepositoryEnv
+from decouple import config, UndefinedValueError
 
-# BASE_DIR = path to /modular_kitchen_website/
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
-# Now move into 'env/.env' from there
-ENV_PATH = os.path.join(BASE_DIR, '..', 'env', '.env')  # 👈 this is the fix
-
-# Normalize the full path
-ENV_PATH = os.path.normpath(ENV_PATH)
-
-# Load .env file
-config = Config(RepositoryEnv(ENV_PATH))
+# Use `config()` directly — no need to point to .env manually
+EMAIL_HOST_USER = config("EMAIL_HOST_USER", default=None)
+EMAIL_HOST_PASSWORD = config("EMAIL_HOST_PASSWORD", default=None)
 
 
 
