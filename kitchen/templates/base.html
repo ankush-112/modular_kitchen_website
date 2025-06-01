@@ -4,7 +4,10 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
     <title>{% block title %}Trioo Kitchen - Preview{% endblock %}</title>
 
     <!-- External CSS -->
@@ -25,47 +28,46 @@
         padding: 0;
         height: 100%;
       }
+
       iframe.full-screen-preview__frame {
         width: 100%;
-        height: calc(100vh - 70px); /* Adjust depending on header height */
+        height: calc(100vh - 70px);
         border: none;
       }
-      header {
-        background-color: #fff;
-        border-bottom: 1px solid #ccc;
-        padding: 10px 20px;
-      }
-      nav ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        gap: 20px;
-        align-items: center;
-      }
-      nav ul li {
-        display: inline;
-      }
-      nav ul li a {
-        text-decoration: none;
-        color: #000;
+
+      .navbar-nav .nav-link {
+        padding: 10px 15px;
+        display: inline-block;
         font-weight: 500;
       }
 
+      .dropdown-menu {
+        background-color: #222;
+        border: none;
+      }
+
+      .dropdown-menu .dropdown-item {
+        color: white;
+      }
+
+      .dropdown-menu .dropdown-item:hover {
+        background-color: #444;
+      }
+
       .page-header {
-        background-color: #f3f3f3; /* Soft gray background */
+        background-color: #f3f3f3;
         padding: 4rem 1rem;
         text-align: center;
       }
-    
+
       .header-center h1 {
         font-size: 3rem;
-        color: #d35400; /* Deep orange title */
+        color: #d35400;
         font-weight: bold;
         margin-bottom: 1rem;
         text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
       }
-    
+
       .header-center .tagline {
         font-size: 1.2rem;
         color: #555;
@@ -81,145 +83,132 @@
   <body>
     <!-- Navigation -->
     <header>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4">
-        <a class="navbar-brand bg-white p-1 rounded" href="{% url 'home' %}">
-          <img src="{% static 'images/logo.svg' %}" alt="Logo" height="40" />
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNavDropdown"
-          aria-controls="navbarNavDropdown"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand bg-white p-1 rounded" href="{% url 'home' %}">
+            <img src="{% static 'images/logo.svg' %}" alt="Logo" height="40" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link text-white" href="{% url 'home' %}"
-                >MODULAR KITCHEN</a
-              >
-            </li>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="{% url 'home' %}"
+                  >MODULAR KITCHEN</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="{% url 'about' %}"
+                  >ABOUT</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle text-white"
+                  href="#"
+                  id="kitchenDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  KITCHEN
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="kitchenDropdown">
+                  <li>
+                    <a class="dropdown-item" href="{% url 'kitchen' %}"
+                      >L Shaped Kitchen</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="{% url 'kitchen_U_page' %}"
+                      >U Shaped Kitchen</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="{% url 'g_shaped' %}"
+                      >G Shaped Kitchen</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="{% url 'inline_kitchen' %}"
+                      >In-Line Kitchen</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="{% url 'Parallel_kitchen' %}"
+                      >Parallel Kitchen</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="{% url 'island_kitchen' %}"
+                      >Island Kitchen</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="{% url 'italian_kitchen' %}"
+                      >Italian Kitchen</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="{% url 'german_kitchen' %}"
+                      >German Kitchen</a
+                    >
+                  </li>
+                </ul>
+              </li>
 
-            <!-- Wardrobe Dropdown -->
-            <li class="nav-item dropdown position-relative">
-              <a
-                class="nav-link dropdown-toggle text-white"
-                href="#"
-                id="wardrobeDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                WARDROBE
-              </a>
-              <ul
-                class="dropdown-menu shadow"
-                aria-labelledby="wardrobeDropdown"
-                style="background-color: #222; border: none; min-width: 200px"
-              >
-                <li>
-                  <a
-                    class="dropdown-item text-white"
-                    href="{% url 'walkin_wardrobe' %}"
-                    >Walk in Wardrobe</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item text-white"
-                    href="{% url 'hinged_wardrobe' %}"
-                    >Hinged Wardrobe</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item text-white"
-                    href="{% url 'sliding_wardrobe' %}"
-                    >Sliding Wardrobe</a
-                  >
-                </li>
-              </ul>
-            </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle text-white"
+                  href="#"
+                  id="wardrobeDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  WARDROBE
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="wardrobeDropdown">
+                  <li>
+                    <a class="dropdown-item" href="{% url 'walkin_wardrobe' %}"
+                      >Walk in Wardrobe</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="{% url 'hinged_wardrobe' %}"
+                      >Hinged Wardrobe</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="{% url 'sliding_wardrobe' %}"
+                      >Sliding Wardrobe</a
+                    >
+                  </li>
+                </ul>
+              </li>
 
-            <li class="nav-item">
-              <a class="nav-link text-white" href="{% url 'about' %}">ABOUT</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-white" href="{% url 'contact' %}"
-                >CONTACT</a
-              >
-            </li>
-            <!-- Kitchen Dropdown -->
-            <li class="nav-item dropdown position-relative">
-              <a
-                class="nav-link dropdown-toggle text-white"
-                href="#"
-                id="kitchenDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                KITCHEN
-              </a>
-              <ul
-                class="dropdown-menu shadow"
-                aria-labelledby="kitchenDropdown"
-                style="background-color: #222; border: none; min-width: 220px"
-              >
-                <li>
-                  <a class="dropdown-item text-white" href="{% url 'kitchen' %}"
-                    >L Shaped Kitchen</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item text-white" href="{% url 'kitchen' %}"
-                    >U Shaped Kitchen</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item text-white" href="{% url 'kitchen' %}"
-                    >G Shaped Kitchen</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item text-white" href="{% url 'kitchen' %}"
-                    >In-Line Kitchen</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item text-white" href="{% url 'kitchen' %}"
-                    >Parallel Kitchen</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item text-white" href="{% url 'kitchen' %}"
-                    >Island Kitchen</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item text-white" href="{% url 'kitchen' %}"
-                    >Italian Kitchen</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item text-white" href="{% url 'kitchen' %}"
-                    >German Kitchen</a
-                  >
-                </li>
-              </ul>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link text-white" href="{% url 'product' %}"
-                >PRODUCTS</a
-              >
-            </li>
-          </ul>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="{% url 'product' %}"
+                  >PRODUCTS</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="{% url 'contact' %}"
+                  >CONTACT</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
       </nav>
     </header>
@@ -235,7 +224,7 @@
       {% endblock %}
     </main>
 
-    <!-- Footer (optional) -->
+    <!-- Footer -->
     <footer class="text-center py-3 bg-light mt-auto">
       <p>&copy; {% now "Y" %} Trioo Kitchen. All rights reserved.</p>
     </footer>

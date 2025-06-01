@@ -1,0 +1,223 @@
+{% extends 'base.html' %} {% load static %} {% block title %}German Kitchen –
+Precision Meets Style{% endblock %} {% block content %}
+
+<!-- HERO SECTION -->
+<section
+  class="hero-section position-relative text-white text-center d-flex justify-content-center align-items-center"
+  style="
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url('https://images.pexels.com/photos/6585761/pexels-photo-6585761.jpeg?auto=compress&cs=tinysrgb&w=1350')
+        center center/cover no-repeat;
+    min-height: 60vh;
+  "
+>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <h1 class="display-3 fw-bold text-shadow">German Kitchen</h1>
+        <p class="lead text-shadow">
+          Precision-crafted kitchens combining sleek aesthetics with advanced
+          functionality—engineered to perfection.
+        </p>
+        <a href="{% url 'contact' %}" class="btn btn-light btn-lg mt-3">
+          Plan Your Kitchen
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INTRODUCTION -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="fw-bold mb-4">Elegance, Efficiency, and Engineering</h2>
+    <p class="mb-4">
+      German kitchens are a symbol of craftsmanship, functionality, and high-end
+      innovation. Every component is designed with precision to ensure a
+      seamless and efficient cooking experience.
+    </p>
+    <p>
+      At Trioo, we bring the best of German design elements to your home—
+      tailored to your space, style, and needs.
+    </p>
+  </div>
+</section>
+
+<!-- KEY BENEFITS -->
+<section class="bg-light py-5">
+  <div class="container">
+    <h2 class="fw-bold text-center mb-5">Why Go German?</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 border-0 shadow">
+          <div class="card-body">
+            <h4 class="card-title">Precision Engineering</h4>
+            <p class="card-text">
+              Built to exacting standards with advanced hardware and fittings
+              that offer unmatched durability.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 border-0 shadow">
+          <div class="card-body">
+            <h4 class="card-title">Streamlined Aesthetics</h4>
+            <p class="card-text">
+              Minimalist beauty with handle-less cabinets, integrated
+              appliances, and sleek finishes that suit modern homes.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 border-0 shadow">
+          <div class="card-body">
+            <h4 class="card-title">Smart Functionality</h4>
+            <p class="card-text">
+              Intelligent storage, space-saving designs, and ergonomic layouts
+              make cooking a joy.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="fw-bold mb-4">Signature German Features</h2>
+    <div class="row align-items-center">
+      <div class="col-md-6 mb-4">
+        <img
+          src="{% static 'images/german-1.jpg' %}"
+          alt="German Kitchen by Trioo"
+          class="img-fluid rounded shadow feature-img-tall"
+        />
+      </div>
+      <div class="col-md-6">
+        <h4>Handle-less Perfection</h4>
+        <p>
+          Sleek cabinet systems with push-to-open or recessed grip handles for
+          seamless aesthetics.
+        </p>
+        <h4>Modular Systems</h4>
+        <p>
+          Customize your setup with modular units that fit perfectly into any
+          space, maximizing utility.
+        </p>
+        <h4>Soft-Close Mechanisms</h4>
+        <p>
+          Doors and drawers that glide shut—quietly and smoothly—adding luxury
+          to every movement.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="bg-dark text-white py-5">
+  <div class="container">
+    <h2 class="fw-bold text-center mb-5">Inspiration Gallery</h2>
+    <div class="row g-3">
+      <div class="col-md-4">
+        <img
+          src="{% static 'images/german-2.jpg' %}"
+          alt="German Kitchen Design"
+          class="img-fluid rounded shadow equal-img"
+        />
+      </div>
+      <div class="col-md-4">
+        <img
+          src="{% static 'images/german-3.jpg' %}"
+          alt="Minimalist Kitchen"
+          class="img-fluid rounded shadow equal-img"
+        />
+      </div>
+      <div class="col-md-4">
+        <img
+          src="{% static 'images/german-4.jpg' %}"
+          alt="Luxury German Kitchen"
+          class="img-fluid rounded shadow equal-img"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DESIGN TIPS -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="fw-bold text-center mb-5">Smart Design Suggestions</h2>
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <div class="card shadow h-100 border-0">
+          <div class="card-body">
+            <h5>Stick to a Neutral Palette</h5>
+            <p class="text-muted">
+              German kitchens often embrace whites, greys, and blacks for a
+              timeless, clean look.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="card shadow h-100 border-0">
+          <div class="card-body">
+            <h5>Use Integrated Lighting</h5>
+            <p class="text-muted">
+              Incorporate LED lighting inside cabinets and drawers to enhance
+              usability and ambiance.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="card shadow h-100 border-0">
+          <div class="card-body">
+            <h5>Choose Built-in Appliances</h5>
+            <p class="text-muted">
+              Maintain a seamless finish by integrating your oven, refrigerator,
+              and dishwasher.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="cta py-5 text-center">
+  <div class="container">
+    <h2 class="fw-bold mb-3">Craft Your German Kitchen with Trioo</h2>
+    <p class="lead">
+      Let's bring innovation and elegance to your cooking space.
+      <a href="{% url 'contact' %}">Contact us now</a> for a free design
+      consultation.
+    </p>
+  </div>
+</section>
+
+<!-- CUSTOM STYLES -->
+<style>
+  .equal-img {
+    height: 250px;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .feature-img-tall {
+    width: 100%;
+    height: 100%;
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+</style>
+
+{% endblock %}

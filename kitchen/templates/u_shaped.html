@@ -1,0 +1,228 @@
+{% extends 'base.html' %} {% load static %} {% block title %}U Shaped Kitchen -
+Premium Design & Inspiration{% endblock %} {% block content %}
+
+<!-- HERO SECTION -->
+<section
+  class="hero-section position-relative text-white text-center d-flex justify-content-center align-items-center"
+  style="
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url('https://images.pexels.com/photos/6284237/pexels-photo-6284237.jpeg?auto=compress&cs=tinysrgb&w=1350')
+        center center/cover no-repeat;
+    min-height: 60vh;
+  "
+>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <h1 class="display-3 fw-bold text-shadow">U Shaped Kitchen</h1>
+        <p class="lead text-shadow">
+          A perfect solution for maximizing storage and workspace—designed to
+          surround you with convenience and class.
+        </p>
+        <a href="{% url 'contact' %}" class="btn btn-primary btn-lg mt-3">
+          Get Started
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INTRODUCTION -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="fw-bold mb-4">A Kitchen That Wraps You in Luxury</h2>
+    <p class="mb-4">
+      U Shaped Kitchens provide unmatched counter space and storage, surrounding
+      the cook with everything within reach. It’s a design favored by chefs and
+      families alike for its ergonomic flow and openness.
+    </p>
+    <p>
+      With Trioo’s customized design solutions, we ensure your U shaped layout
+      is not only practical but also a visual masterpiece that blends with your
+      interiors.
+    </p>
+  </div>
+</section>
+
+<!-- DESIGN BENEFITS -->
+<section class="bg-light py-5">
+  <div class="container">
+    <h2 class="fw-bold text-center mb-5">Why Choose a U Shaped Kitchen?</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 border-0 shadow">
+          <div class="card-body">
+            <h4 class="card-title">Maximum Storage</h4>
+            <p class="card-text">
+              The triple-wall design allows for ample cabinetry, drawers, and
+              smart compartments—ideal for busy homes.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 border-0 shadow">
+          <div class="card-body">
+            <h4 class="card-title">Efficient Workflow</h4>
+            <p class="card-text">
+              Ensures a smooth work triangle with minimal movement—keeping
+              everything from prep to plating in arm’s reach.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 border-0 shadow">
+          <div class="card-body">
+            <h4 class="card-title">Seamless Design Integration</h4>
+            <p class="card-text">
+              From contemporary to traditional, U shaped kitchens adapt
+              beautifully with a wide range of materials and styles.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="fw-bold mb-4">Features & Materials</h2>
+    <div class="row align-items-center">
+      <div class="col-md-6 mb-4">
+        <img
+          src="{% static 'images/u_kitchen_01.jpeg' %}"
+          alt="U Shaped Trioo Kitchen"
+          class="img-fluid rounded shadow feature-img-tall"
+        />
+      </div>
+      <div class="col-md-6">
+        <h4>Premium Layout Engineering</h4>
+        <p>
+          Designed for three adjoining walls, giving you a wraparound kitchen
+          experience without clutter.
+        </p>
+        <h4>Material Versatility</h4>
+        <p>
+          Glossy laminates, textured wood, acrylic panels—you name it. Your
+          kitchen, your signature.
+        </p>
+        <h4>Ergonomic Storage Options</h4>
+        <p>
+          From corner carousels to pantry towers, we bring high-tech convenience
+          into classic form.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="bg-dark text-white py-5">
+  <div class="container">
+    <h2 class="fw-bold text-center mb-5">Inspiration Gallery</h2>
+    <div class="row g-3">
+      <div class="col-md-4">
+        <img
+          src="{% static 'images/L-kitchen.jpg' %}"
+          alt="U Shaped Kitchen"
+          class="img-fluid rounded shadow equal-img"
+        />
+      </div>
+      <div class="col-md-4">
+        <img
+          src="{% static 'images/u_kitchen_01.jpeg' %}"
+          alt="U Shaped Trioo Kitchen"
+          class="img-fluid rounded shadow equal-img"
+        />
+      </div>
+      <div class="col-md-4">
+        <img
+          src="{% static 'images/about-kitchen.jpg' %}"
+          alt="U Shaped Trioo Kitchen"
+          class="img-fluid rounded shadow equal-img"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DESIGN TIPS & SUGGESTIONS -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="fw-bold text-center mb-5">Design Tips & Suggestions</h2>
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <div class="card shadow h-100 border-0">
+          <div class="card-body">
+            <h5>Keep the Corners Functional</h5>
+            <p class="text-muted">
+              Use magic corners or carousel units to optimize otherwise wasted
+              corner spaces in a U shaped kitchen.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="card shadow h-100 border-0">
+          <div class="card-body">
+            <h5>Add Task Lighting</h5>
+            <p class="text-muted">
+              Under-cabinet lights help brighten up prep zones and enhance
+              visibility across countertops.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="card shadow h-100 border-0">
+          <div class="card-body">
+            <h5>Open One End for Flow</h5>
+            <p class="text-muted">
+              Keep one side of the U layout open to adjoining areas like the
+              dining room for better movement and integration.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="cta">
+  <div class="container">
+    <h2>Design Your U Shaped Kitchen with Trioo</h2>
+    <p>
+      Ready to transform your kitchen space?
+      <a href="/contact">Reach out today</a> to schedule a free design
+      consultation.
+    </p>
+  </div>
+</section>
+
+<!-- CUSTOM STYLES -->
+<style>
+  .equal-img {
+    height: 250px;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .feature-img-tall {
+    width: 100%;
+    height: 100%;
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .feature-row {
+    align-items: stretch;
+  }
+</style>
+
+{% endblock %}

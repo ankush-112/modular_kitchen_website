@@ -1,0 +1,224 @@
+{% extends 'base.html' %} {% load static %} {% block title %}Island Kitchen -
+Luxury Centerpiece for Modern Homes{% endblock %} {% block content %}
+
+<!-- HERO SECTION -->
+<section
+  class="hero-section position-relative text-white text-center d-flex justify-content-center align-items-center"
+  style="
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+     url('{% static "images/about-kitchen.jpg" %}') 
+        center center/cover no-repeat;
+    min-height: 60vh;
+  "
+>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <h1 class="display-3 fw-bold text-shadow">Island Kitchen</h1>
+        <p class="lead text-shadow">
+          Where sophistication meets function — create a showstopping
+          centerpiece in your home.
+        </p>
+        <a href="{% url 'contact' %}" class="btn btn-outline-light btn-lg mt-3">
+          Book Free Consultation
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INTRODUCTION -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="fw-bold mb-4">Open. Elegant. Efficient.</h2>
+    <p class="mb-4">
+      The Island Kitchen layout is a contemporary favorite—perfect for open-plan
+      homes. It brings cooking, entertaining, and family time together in one
+      central space.
+    </p>
+    <p>
+      At Trioo, we turn islands into multifunctional masterpieces—with cooktops,
+      sinks, storage, and seating built into one elegant unit.
+    </p>
+  </div>
+</section>
+
+<!-- DESIGN BENEFITS -->
+<section class="bg-light py-5">
+  <div class="container">
+    <h2 class="fw-bold text-center mb-5">Why Choose an Island Kitchen?</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 border-0 shadow">
+          <div class="card-body">
+            <h4 class="card-title">Social Cooking</h4>
+            <p class="card-text">
+              Entertain while you cook—an island creates a hub where family and
+              guests can gather around.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 border-0 shadow">
+          <div class="card-body">
+            <h4 class="card-title">Versatile Workspace</h4>
+            <p class="card-text">
+              More prep space, built-in sinks or stoves, and extra storage all
+              in one place.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 border-0 shadow">
+          <div class="card-body">
+            <h4 class="card-title">Luxury Appeal</h4>
+            <p class="card-text">
+              A statement piece that enhances the aesthetics and value of your
+              home.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="fw-bold mb-4">Features & Finishing Options</h2>
+    <div class="row align-items-center">
+      <div class="col-md-6 mb-4">
+        <img
+          src="{% static 'images/island-kitchen-1.jpg' %}"
+          alt="Island Kitchen"
+          class="img-fluid rounded shadow feature-img-tall"
+        />
+      </div>
+      <div class="col-md-6">
+        <h4>Integrated Appliances</h4>
+        <p>
+          Add stovetops, ovens, wine coolers or sinks directly into your island
+          for seamless functionality.
+        </p>
+        <h4>Seating & Serving</h4>
+        <p>
+          Include bar seating to turn your island into a breakfast bar or casual
+          dining spot.
+        </p>
+        <h4>Premium Materials</h4>
+        <p>
+          Choose from quartz, granite, stainless steel, or hardwood finishes for
+          an island that defines your style.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="bg-dark text-white py-5">
+  <div class="container">
+    <h2 class="fw-bold text-center mb-5">Inspiration Gallery</h2>
+    <div class="row g-3">
+      <div class="col-md-4">
+        <img
+          src="{% static 'images/island-kitchen-2.jpg' %}"
+          alt="Island Kitchen Design"
+          class="img-fluid rounded shadow equal-img"
+        />
+      </div>
+      <div class="col-md-4">
+        <img
+          src="{% static 'images/island-kitchen-3.jpg' %}"
+          alt="Modern Island Kitchen"
+          class="img-fluid rounded shadow equal-img"
+        />
+      </div>
+      <div class="col-md-4">
+        <img
+          src="{% static 'images/island-kitchen-4.jpg' %}"
+          alt="Island Kitchen Inspiration"
+          class="img-fluid rounded shadow equal-img"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TIPS SECTION -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="fw-bold text-center mb-5">
+      Design Tips for Your Island Kitchen
+    </h2>
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <div class="card shadow h-100 border-0">
+          <div class="card-body">
+            <h5>Keep Traffic Flowing</h5>
+            <p class="text-muted">
+              Ensure at least 1 meter clearance on all sides of the island for
+              easy movement.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="card shadow h-100 border-0">
+          <div class="card-body">
+            <h5>Use Contrasting Colors</h5>
+            <p class="text-muted">
+              Make your island stand out with a bold countertop or contrasting
+              cabinetry.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="card shadow h-100 border-0">
+          <div class="card-body">
+            <h5>Add Pendant Lighting</h5>
+            <p class="text-muted">
+              Highlight your island with stylish hanging lights for both
+              aesthetics and task illumination.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="cta">
+  <div class="container">
+    <h2>Make Your Kitchen the Heart of Your Home</h2>
+    <p>
+      Let our designers help you build the perfect island kitchen.
+      <a href="/contact">Get in touch today</a>.
+    </p>
+  </div>
+</section>
+
+<!-- CUSTOM STYLES -->
+<style>
+  .equal-img {
+    height: 250px;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .feature-img-tall {
+    width: 100%;
+    height: 100%;
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+</style>
+
+{% endblock %}

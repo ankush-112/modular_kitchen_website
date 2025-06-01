@@ -1,0 +1,230 @@
+{% extends 'base.html' %} {% load static %} {% block title %}Italian Kitchen -
+Modern Luxury with European Craftsmanship{% endblock %} {% block content %}
+
+<!-- HERO SECTION -->
+<section
+  class="hero-section position-relative text-white text-center d-flex justify-content-center align-items-center"
+  style="
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url('{% static "images/about-kitchen.jpg" %}')
+        center center/cover no-repeat;
+    min-height: 60vh;
+  "
+>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <h1 class="display-3 fw-bold text-shadow">Italian Kitchen</h1>
+        <p class="lead text-shadow">
+          Celebrate Italian elegance with sleek designs, premium materials, and
+          smart innovation—crafted to perfection.
+        </p>
+        <a href="{% url 'contact' %}" class="btn btn-outline-light btn-lg mt-3">
+          Book Free Consultation
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INTRODUCTION -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="fw-bold mb-4">Inspired by Italian Artistry</h2>
+    <p class="mb-4">
+      Italian kitchens are synonymous with refined taste and luxurious
+      simplicity. Built for both aesthetics and performance, they blend timeless
+      elegance with cutting-edge innovation.
+    </p>
+    <p>
+      At Trioo, we bring authentic Italian design to your home, combining sleek
+      cabinetry, flawless finishes, and ergonomic layouts tailored to modern
+      Indian homes.
+    </p>
+  </div>
+</section>
+
+<!-- DESIGN BENEFITS -->
+<section class="bg-light py-5">
+  <div class="container">
+    <h2 class="fw-bold text-center mb-5">Why Choose an Italian Kitchen?</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 border-0 shadow">
+          <div class="card-body">
+            <h4 class="card-title">Timeless Aesthetic</h4>
+            <p class="card-text">
+              Clean lines, minimalist appeal, and luxurious textures that create
+              a sense of understated sophistication.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 border-0 shadow">
+          <div class="card-body">
+            <h4 class="card-title">Innovative Functionality</h4>
+            <p class="card-text">
+              Integrated appliances, soft-close drawers, and intelligent storage
+              make every detail practical and beautiful.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 border-0 shadow">
+          <div class="card-body">
+            <h4 class="card-title">Premium Materials</h4>
+            <p class="card-text">
+              Gloss lacquer, matte lacquer, walnut, and ceramic surfaces—all
+              handpicked to suit your style.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="fw-bold mb-4">Signature Features</h2>
+    <div class="row align-items-center">
+      <div class="col-md-6 mb-4">
+        <img
+          src="{% static 'images/itl-1.jpg' %}"
+          alt="Italian Kitchen"
+          class="img-fluid rounded shadow feature-img-tall"
+        />
+      </div>
+      <div class="col-md-6">
+        <h4>Handleless Cabinetry</h4>
+        <p>
+          Enjoy seamless cabinet fronts with push-to-open or grooved handles,
+          for a clean, modern look.
+        </p>
+        <h4>Flawless Finishes</h4>
+        <p>
+          Choose from high-gloss lacquer, matte laminate, and natural veneers,
+          perfected for durability and elegance.
+        </p>
+        <h4>Compact, Efficient Layouts</h4>
+        <p>
+          Designed for functionality in every square foot, without compromising
+          on luxury.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="bg-dark text-white py-5">
+  <div class="container">
+    <h2 class="fw-bold text-center mb-5">Italian Kitchen Gallery</h2>
+    <div class="row g-3">
+      <div class="col-md-4">
+        <img
+          src="{% static 'images/itl-2.jpg' %}"
+          alt="Italian Kitchen 1"
+          class="img-fluid rounded shadow equal-img"
+        />
+      </div>
+      <div class="col-md-4">
+        <img
+          src="{% static 'images/itl-4.jpg' %}"
+          alt="Italian Kitchen 2"
+          class="img-fluid rounded shadow equal-img"
+        />
+      </div>
+      <div class="col-md-4">
+        <img
+          src="{% static 'images/itl-3.jpg' %}"
+          alt="Italian Kitchen 3"
+          class="img-fluid rounded shadow equal-img"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CLIENT FEEDBACK -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="fw-bold text-center mb-5">Client Impressions</h2>
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <div class="card shadow h-100">
+          <div class="card-body">
+            <p class="fst-italic">
+              "My Italian kitchen is a dream. Minimal yet elegant—thanks to the
+              Trioo team for their precision!"
+            </p>
+          </div>
+          <div class="card-footer bg-white border-0">
+            <strong>– Divya S.</strong>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="card shadow h-100">
+          <div class="card-body">
+            <p class="fst-italic">
+              "Superb finish and quality. We love the smart storage Trioo
+              incorporated into the compact layout."
+            </p>
+          </div>
+          <div class="card-footer bg-white border-0">
+            <strong>– Neeraj V.</strong>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="card shadow h-100">
+          <div class="card-body">
+            <p class="fst-italic">
+              "The entire process was smooth. Great design, timely delivery, and
+              premium experience all around!"
+            </p>
+          </div>
+          <div class="card-footer bg-white border-0">
+            <strong>– Meenal P.</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="cta">
+  <div class="container">
+    <h2>Bring Italian Elegance to Your Kitchen</h2>
+    <p>
+      Book a free consultation to explore the finest Italian kitchen designs for
+      your home.
+      <a href="/contact">Contact us today</a>.
+    </p>
+  </div>
+</section>
+
+<!-- CUSTOM STYLES -->
+<style>
+  .equal-img {
+    height: 250px;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .feature-img-tall {
+    width: 100%;
+    height: 100%;
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+</style>
+
+{% endblock %}

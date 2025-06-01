@@ -1,0 +1,150 @@
+{% extends 'base.html' %} {% load static %} {% block title %}Inline Kitchen
+Design - Sleek & Modern Solutions{% endblock %} {% block content %}
+
+<!-- HERO SECTION -->
+<section
+  class="text-white text-center position-relative d-flex justify-content-center align-items-center"
+  style="
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url('{% static "images/about-kitchen.jpg" %}') center/cover no-repeat;
+    min-height: 60vh;
+  "
+>
+  <div class="container z-1">
+    <h1 class="display-3 fw-bold text-shadow">Inline Kitchen Design</h1>
+    <p class="lead text-light text-shadow">
+      Experience linear elegance with minimalism, efficiency, and timeless
+      aesthetics.
+    </p>
+    <a href="{% url 'contact' %}" class="btn btn-outline-light btn-lg mt-3">
+      Schedule Your Design
+    </a>
+  </div>
+</section>
+
+
+<!-- ABOUT INLINE KITCHEN -->
+<section class="py-5 bg-white">
+  <div class="container">
+    <h2 class="fw-bold mb-4 text-center">Why Go Inline?</h2>
+    <p class="lead text-center mx-auto" style="max-width: 800px">
+      An inline or one-wall kitchen layout is ideal for contemporary homes where
+      simplicity meets sophistication. Whether you're working with a studio
+      apartment or an open-plan home, this design offers elegance in its purest
+      form.
+    </p>
+  </div>
+</section>
+
+<!-- FEATURES SECTION -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-5">Features That Elevate</h2>
+    <div class="row align-items-center feature-row">
+      <div class="col-md-6 mb-4">
+        <img
+          src="{% static 'images/inline-2.webp' %}"
+          alt="Inline Kitchen Trioo"
+          class="img-fluid rounded shadow feature-img-tall"
+        />
+      </div>
+      <div class="col-md-6">
+        <ul class="list-unstyled">
+          <li class="mb-3">
+            <h5 class="fw-semibold">Space Optimized</h5>
+            <p class="text-muted">
+              Perfect for small areas or large open plans that require a clean
+              and elegant backdrop.
+            </p>
+          </li>
+          <li class="mb-3">
+            <h5 class="fw-semibold">Streamlined Aesthetics</h5>
+            <p class="text-muted">
+              Offers a uniform visual appeal—ideal for minimalists and
+              modernists alike.
+            </p>
+          </li>
+          <li class="mb-3">
+            <h5 class="fw-semibold">Custom Cabinetry</h5>
+            <p class="text-muted">
+              Tall units, handleless drawers, integrated appliances—all tailored
+              to your daily flow.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MATERIALS & FINISHES -->
+<section class="py-5 bg-dark text-white">
+  <div class="container">
+    <h2 class="fw-bold text-center mb-5">Finishes That Speak Luxury</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card bg-transparent text-white border-light h-100">
+          <div class="card-body">
+            <h5 class="card-title">High Gloss Laminates</h5>
+            <p class="card-text">
+              Sleek surfaces with a mirror-like finish for a contemporary look.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card bg-transparent text-white border-light h-100">
+          <div class="card-body">
+            <h5 class="card-title">Matte Black Acrylic</h5>
+            <p class="card-text">
+              Bold and subtle at once, giving your kitchen a high-end feel.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card bg-transparent text-white border-light h-100">
+          <div class="card-body">
+            <h5 class="card-title">Textured Wood Grain</h5>
+            <p class="card-text">
+              A natural touch to balance the sleek linear composition.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="py-5 text-center bg-white">
+  <div class="container">
+    <h2 class="fw-bold mb-3">Upgrade Your Kitchen, The Linear Way</h2>
+    <p class="lead mb-4">
+      Book a free consultation and visualize your kitchen in our design studio.
+    </p>
+    <a href="{% url 'contact' %}" class="btn btn-dark btn-lg">Start Now</a>
+  </div>
+</section>
+
+<!-- CUSTOM STYLES -->
+<style>
+  .feature-img-tall {
+    height: 100%;
+    max-height: 350px;
+    object-fit: cover;
+    width: 100%;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .feature-row {
+    align-items: stretch;
+  }
+
+  .text-shadow {
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+  }
+</style>
+
+{% endblock %}

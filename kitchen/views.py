@@ -57,6 +57,8 @@ def about_page(request):
     return render(request, "about.html")
 def kitchen_page(request):
     return render(request, "kitchen.html")
+def kitchen_U_page(request):
+    return render(request, "u_shaped.html")
 def product_page(request):
     return render(request, "product.html")
 def gallery_page(request):
@@ -67,6 +69,19 @@ def hinged_wardrobe(request):
     return render(request, 'hinged.html')
 def sliding_wardrobe(request):
     return render(request, 'sliding_wardrobe.html')
+def g_shaped(request):
+    return render(request, 'g_shaped.html')
+def inline_kitchen(request):
+    return render(request, 'inline_kitchen.html')
+def island_kitchen(request):
+    return render(request, 'island_kitchen.html')
+def italian_kitchen(request):
+    return render(request, 'italian_kitchen.html')
+def german_kitchen(request):
+    return render(request, 'german_kitchen.html')
+
+def Parallel_kitchen(request):
+    return render(request, 'Parallel_kitchen.html')
 def get_categories(request):
     categories = list(Category.objects.values())  
     return JsonResponse({"categories": categories}, safe=False)

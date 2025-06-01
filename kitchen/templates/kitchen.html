@@ -2,29 +2,19 @@
 Premium Design & Inspiration{% endblock %} {% block content %}
 <!-- HERO SECTION -->
 <section
-  class="hero-section position-relative"
+  class="hero-section position-relative text-white text-center d-flex justify-content-center align-items-center"
   style="
-    background: url('https://images.pexels.com/photos/6585761/pexels-photo-6585761.jpeg?auto=compress&cs=tinysrgb&w=1350')
-      center center/cover no-repeat;
-    min-height: 70vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url('https://images.pexels.com/photos/6585761/pexels-photo-6585761.jpeg?auto=compress&cs=tinysrgb&w=1350')
+        center center/cover no-repeat;
+    min-height: 60vh;
   "
 >
-  <div
-    class="overlay"
-    style="
-      background-color: rgba(0, 0, 0, 0.5);
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-    "
-  ></div>
-  <div class="container h-100 position-relative" style="z-index: 2">
-    <div class="row h-100 align-items-center">
-      <div class="col-md-8 text-white">
-        <h1 class="display-3 fw-bold">L Shaped Kitchen</h1>
-        <p class="lead">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <h1 class="display-3 fw-bold text-shadow">L Shaped Kitchen</h1>
+        <p class="lead text-shadow">
           Experience the perfect balance of functionality and luxury. Designed
           to maximize space while ensuring a seamless flow.
         </p>
@@ -139,32 +129,41 @@ Premium Design & Inspiration{% endblock %} {% block content %}
       <!-- ✅ L Shaped Kitchen -->
       <div class="col-md-4">
         <img
-          src="https://images.pexels.com/photos/6284237/pexels-photo-6284237.jpeg?auto=compress&cs=tinysrgb&w=800"
-          alt="L Shaped Kitchen"
-          class="img-fluid rounded shadow"
+          src="{% static 'images/L-kitchen.jpg' %}"
+          alt="U Shaped Kitchen"
+          class="img-fluid rounded shadow equal-img"
         />
       </div>
 
       <!-- ✅ U Shaped Kitchen -->
       <div class="col-md-4">
         <img
-          src="https://images.pexels.com/photos/7534553/pexels-photo-7534553.jpeg?auto=compress&cs=tinysrgb&w=800"
+          src="{% static 'images/Ankush.jpg' %}"
           alt="U Shaped Kitchen"
-          class="img-fluid rounded shadow"
+          class="img-fluid rounded shadow equal-img"
         />
       </div>
 
-      <!-- ✅ Modular Island Kitchen (already liked by you) -->
+      <!-- ✅ Modular Island Kitchen -->
       <div class="col-md-4">
         <img
           src="https://images.pexels.com/photos/2089698/pexels-photo-2089698.jpeg?auto=compress&cs=tinysrgb&w=800"
           alt="Modular Kitchen Interior"
-          class="img-fluid rounded shadow"
+          class="img-fluid rounded shadow equal-img"
         />
       </div>
     </div>
   </div>
 </section>
+
+<!-- Add this to your <style> block or CSS file -->
+<style>
+  .equal-img {
+    height: 250px; /* adjust as needed */
+    object-fit: cover;
+    width: 100%;
+  }
+</style>
 
 <!-- TESTIMONIALS -->
 <section class="py-5">
@@ -215,18 +214,13 @@ Premium Design & Inspiration{% endblock %} {% block content %}
 </section>
 
 <!-- CTA SECTION -->
-<section
-  class="py-5 text-white text-center"
-  style="background: linear-gradient(135deg, #4b79a1, #283e51)"
->
+<section class="cta">
   <div class="container">
-    <h2 class="fw-bold">Let's Build Your Dream Kitchen</h2>
-    <p class="lead mb-4">
-      Ready to upgrade? Our expert designers are just one click away.
+    <h2>Ready to Design Your Dream Kitchen?</h2>
+    <p>
+      Explore our latest modular kitchen collections or
+      <a href="/contact">contact us</a> to book a design consultation today!
     </p>
-    <a href="{% url 'contact' %}" class="btn btn-light btn-lg px-5">
-      Schedule a Free Consultation
-    </a>
   </div>
 </section>
 {% endblock %}

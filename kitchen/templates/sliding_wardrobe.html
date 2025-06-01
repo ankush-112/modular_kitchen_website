@@ -1,67 +1,129 @@
-{% extends 'base.html' %}
-{% load static %}
-{% block content %}
+{% extends 'base.html' %} {% load static %} {% block content %}
 
-<!-- Hero Banner -->
-<div
-  class="d-flex align-items-center justify-content-center text-center"
+<!-- HERO SECTION WITH OVERLAY -->
+<section
+  class="position-relative d-flex align-items-center justify-content-center text-center"
   style="
-    background: url('https://tse3.mm.bing.net/th?id=OIP.u4XZKfsrcny7CMnxMhiX9QHaJ3&pid=Api') center / cover no-repeat;
-    height: 90vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url('https://tse3.mm.bing.net/th?id=OIP.u4XZKfsrcny7CMnxMhiX9QHaJ3&pid=Api')
+        center / cover no-repeat;
+    height: 60vh;
   "
 >
-  <h1 class="text-white px-3" style="font-size: 3.5rem; text-shadow: 2px 2px 8px #000;">
-    Sliding Wardrobe
-  </h1>
-</div>
+  <div class="container text-white">
+    <h1
+      class="display-3 fw-bold text-shadow"
+      style="text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7)"
+    >
+      Sliding Wardrobe
+    </h1>
+    <p class="lead mt-3 fs-4 text-light">
+      The perfect blend of luxury, innovation, and space optimization.
+    </p>
+  </div>
+</section>
 
-<!-- Description Section -->
-<div class="container my-5">
-  <p class="text-center fs-5 text-muted px-2">
-    Discover the elegance and functionality of sliding wardrobes at Trioo. Our
-    designers craft sleek, space-saving solutions tailored to modern homes. With
-    a blend of style and utility, these wardrobes redefine storage and elevate
-    interior design. Glide into luxury with every slide.
-  </p>
-</div>
+<!-- DESCRIPTION SECTION -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <p class="text-center fs-5 text-muted mx-auto" style="max-width: 800px">
+      At <strong>Trioo Kitchens & Wardrobes</strong>, we understand that your
+      wardrobe should do more than store clothes. It should speak to your
+      personality, lifestyle, and taste. Our premium sliding wardrobe systems
+      offer a modern solution that saves space, enhances decor, and brings
+      elegance to everyday living.
+    </p>
+  </div>
+</section>
 
-<!-- Gallery Section -->
-<div class="container my-5">
-  <h2 class="text-center mb-4">
-    Slide into Style – Contemporary Sliding Wardrobe Designs
-  </h2>
-  <div class="row g-4">
-    <div class="col-lg-4 col-md-6 col-sm-12">
-      <div class="card h-100 shadow">
-        <img
-          src="https://tse1.mm.bing.net/th?id=OIP.cYAvbtcXcKlq2T4t2gEB2gHaJq&pid=Api"
-          class="card-img-top img-fluid w-100"
-          style="object-fit: cover; aspect-ratio: 4 / 3;"
-          alt="Sliding Wardrobe 1"
-        />
+<!-- BENEFITS SECTION -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-5">Why Choose Sliding Wardrobes?</h2>
+    <div class="row text-center text-muted">
+      <div class="col-md-4 mb-4">
+        <h4 class="fw-semibold">Space-Saving Design</h4>
+        <p>No swinging doors—ideal for compact or modern bedrooms.</p>
       </div>
-    </div>
-    <div class="col-lg-4 col-md-6 col-sm-12">
-      <div class="card h-100 shadow">
-        <img
-          src="https://tse3.mm.bing.net/th?id=OIP.u4XZKfsrcny7CMnxMhiX9QHaJ3&pid=Api"
-          class="card-img-top img-fluid w-100"
-          style="object-fit: cover; aspect-ratio: 4 / 3;"
-          alt="Sliding Wardrobe 2"
-        />
+      <div class="col-md-4 mb-4">
+        <h4 class="fw-semibold">Contemporary Appeal</h4>
+        <p>
+          Choose from lacquered glass, mirrors, woodgrain, or matte finishes.
+        </p>
       </div>
-    </div>
-    <div class="col-lg-4 col-md-6 col-sm-12">
-      <div class="card h-100 shadow">
-        <img
-          src="https://tse1.mm.bing.net/th?id=OIP.LcxJ4ICbxm6_fT-vfqe_VQHaHa&pid=Api"
-          class="card-img-top img-fluid w-100"
-          style="object-fit: cover; aspect-ratio: 4 / 3;"
-          alt="Sliding Wardrobe 3"
-        />
+      <div class="col-md-4 mb-4">
+        <h4 class="fw-semibold">Effortless Access</h4>
+        <p>
+          Smooth-glide tracks with soft-close systems make accessing your
+          wardrobe a joy.
+        </p>
       </div>
     </div>
   </div>
-</div>
+</section>
+
+<!-- GALLERY SECTION -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-5">Slide into Style – Premium Designs</h2>
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100 border-0 shadow-sm">
+          <img
+            src="https://tse1.mm.bing.net/th?id=OIP.cYAvbtcXcKlq2T4t2gEB2gHaJq&pid=Api"
+            class="card-img-top gallery-img"
+            alt="Sliding Wardrobe 1"
+          />
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100 border-0 shadow-sm">
+          <img
+            src="https://tse3.mm.bing.net/th?id=OIP.u4XZKfsrcny7CMnxMhiX9QHaJ3&pid=Api"
+            class="card-img-top gallery-img"
+            alt="Sliding Wardrobe 2"
+          />
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100 border-0 shadow-sm">
+          <img
+            src="https://tse1.mm.bing.net/th?id=OIP.LcxJ4ICbxm6_fT-vfqe_VQHaHa&pid=Api"
+            class="card-img-top gallery-img"
+            alt="Sliding Wardrobe 3"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="bg-dark text-white text-center py-5">
+  <div class="container">
+    <h2 class="mb-3 fw-bold">Customize Your Sliding Wardrobe with Trioo</h2>
+    <p class="lead mb-4">
+      Ready to transform your bedroom into a space of seamless elegance?
+    </p>
+    <a href="{% url 'contact' %}" class="btn btn-light btn-lg px-4"
+      >Get a Free Consultation</a
+    >
+  </div>
+</section>
+
+<!-- STYLES -->
+<style>
+  .gallery-img {
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+  }
+
+  .text-shadow {
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  }
+</style>
 
 {% endblock %}

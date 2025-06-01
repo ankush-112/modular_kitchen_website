@@ -1,71 +1,140 @@
-{% extends 'base.html' %}
-{% load static %}
-{% block content %}
+{% extends 'base.html' %} {% load static %} {% block content %}
 
-<!-- Hero Banner -->
-<div
+<!-- HERO BANNER WITH OVERLAY -->
+<section
   style="
-    background: url('{% static 'images/Walk-in.jpg' %}') center center / cover no-repeat;
-    min-height: 60vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url('{% static 'images/Walk-in.jpg' %}') center center / cover no-repeat;
+    min-height: 70vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
   "
 >
-  <h1 style="color: white; font-size: 3rem; text-shadow: 2px 2px 8px rgba(0,0,0,0.7); padding: 1rem;">
-    Walk-In Wardrobe Solutions
+  <h1
+    style="
+      color: white;
+      font-size: 3.5rem;
+      font-weight: bold;
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+      padding: 2rem;
+    "
+  >
+    Bespoke Walk-In Wardrobe Solutions
   </h1>
-</div>
+</section>
 
-<!-- Description Section -->
-<section class="py-5 bg-light">
+<!-- INTRO SECTION -->
+<section class="py-5 bg-white">
   <div class="container">
-    <p class="text-center fs-5 text-muted">
-      At Trioo Kitchen, we specialize in crafting modern walk-in wardrobes that enhance both functionality and luxury. 
-      Our experienced architects and designers analyze spatial possibilities to develop tailor-made wardrobe solutions that reflect your lifestyle and optimize storage in the most elegant way. 
-      From smart modular storage units to stylish finishes, every wardrobe is designed to blend seamlessly with your bedroom or dressing space.
-    </p>
+    <div class="row align-items-center">
+      <div class="col-md-6 mb-4">
+        <img
+          src="{% static 'images/hero-walkin.jpg' %}"
+          class="img-fluid intro-img"
+          alt="Custom Walk-In Layout"
+        />
+      </div>
+      <div class="col-md-6">
+        <h2 class="fw-bold mb-3">Luxury That Organizes Your World</h2>
+        <p class="text-muted">
+          Our walk-in wardrobes are designed to offer more than just storage.
+          They are private spaces crafted for clarity, elegance, and ease. With
+          precision planning and personalized modules, we give you the freedom
+          to organize your attire the way you live.
+        </p>
+        <ul class="list-unstyled mt-4">
+          <li>
+            <i class="bi bi-check-circle-fill text-primary me-2"></i>Smart
+            shelving and modular units
+          </li>
+          <li>
+            <i class="bi bi-check-circle-fill text-primary me-2"></i
+            >LED-integrated hanging zones
+          </li>
+          <li>
+            <i class="bi bi-check-circle-fill text-primary me-2"></i>Glass
+            shutters, soft-close drawers
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- Gallery Section -->
-<section class="py-5">
+<!-- GALLERY SECTION -->
+<section class="py-5 bg-light">
   <div class="container">
-    <h2 class="text-center mb-5">Style Meets Space: Discover Our Walk-In Wardrobe Designs</h2>
+    <h2 class="text-center fw-bold mb-5">Moodboard Gallery</h2>
     <div class="row g-4">
       <div class="col-md-4 col-sm-6">
         <img
-          src="{% static 'images/hero-walkin.jpg' %}"
-          class="img-fluid rounded shadow-sm"
-          alt="Spacious Walk-in Wardrobe"
-        />
-      </div>
-      <div class="col-md-4 col-sm-6">
-        <img
           src="{% static 'images/walkin.jpg' %}"
-          class="img-fluid rounded shadow-sm"
-          alt="Custom Wardrobe Design"
+          class="img-fluid gallery-img"
+          alt="Wardrobe Zone"
         />
       </div>
       <div class="col-md-4 col-sm-6">
         <img
           src="{% static 'images/hero-walkin1.jpg' %}"
-          class="img-fluid rounded shadow-sm"
-          alt="Elegant Walk-in Layout"
+          class="img-fluid gallery-img"
+          alt="Modular Closet"
+        />
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <img
+          src="{% static 'images/Walk-in.jpg' %}"
+          class="img-fluid gallery-img"
+          alt="Luxury Walk-In"
         />
       </div>
     </div>
   </div>
 </section>
 
-<!-- CTA Section -->
-<section class="cta bg-dark text-white text-center py-5">
-  <div class="container">
-    <h2 class="mb-3">Create Your Personal Dressing Retreat</h2>
-    <p class="lead mb-4">Get started with a customized walk-in wardrobe that blends luxury and practicality.</p>
-    <a href="{% url 'contact' %}" class="btn btn-light btn-lg">Book Your Consultation</a>
+<!-- DESIGN PROMISE -->
+<section class="py-5">
+  <div class="container text-center">
+    <h2 class="fw-bold mb-3">Tailored Design. Seamless Integration.</h2>
+    <p class="lead text-muted mx-auto" style="max-width: 700px">
+      From initial consultation to 3D visualization and final installation, our
+      team ensures every inch of your wardrobe is refined, functional, and
+      inspiring. Whether minimal or grand, your walk-in wardrobe will be
+      uniquely you.
+    </p>
   </div>
 </section>
+
+<!-- CTA SECTION -->
+<section class="cta bg-dark text-white text-center py-5">
+  <div class="container">
+    <h2 class="mb-3">Begin Your Wardrobe Transformation</h2>
+    <p class="lead mb-4">Our design experts are just a click away.</p>
+    <a href="{% url 'contact' %}" class="btn btn-light btn-lg"
+      >Book a Free Consultation</a
+    >
+  </div>
+</section>
+
+<!-- CUSTOM STYLES -->
+<style>
+  .gallery-img {
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .intro-img {
+    height: 100%;
+    max-height: 400px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+</style>
 
 {% endblock %}
